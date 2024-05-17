@@ -66,8 +66,8 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                 	<span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Create Account</a></li>
+                        <li><a href="{%url 'login'%}">Login</a></li>
+                        <li><a href="{%url 'register'%}">Create Account</a></li>
                         <li><a href="wishlist.html">Wishlist</a></li>
                     </ul>
                 </div>
@@ -81,7 +81,7 @@
             <div class="row align-items-center">
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="index.html">
+                    <a href="{%url 'index'%}">
                     	<img src="{% static 'assets/images/logo.svg'%}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                     </a>
                 </div>
@@ -119,7 +119,7 @@
                 <!--Mobile Logo-->
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                 	<div class="logo">
-                        <a href="index.html">
+                        <a href="{%url 'index'%}">
                             <img src="{% static 'assets/images/logo.svg'%}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                         </a>
                     </div>
