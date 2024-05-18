@@ -102,10 +102,10 @@ def activate( request, uidb64, token):
 
 class LoginView(View):
     def get(self, request):
-        return render(request, 'authentication/login.html')
+        return render(request, 'login.html')
 
     def post(self, request):
-        email = request.POST['useremailname']
+        email = request.POST['email']
         password = request.POST['password']
 
         if email and password:
@@ -116,10 +116,10 @@ class LoginView(View):
                     auth.login(request, user)
                     messages.success(request, 'Welcome, ' +
                                      user.username+' you are now logged in')
-                    return redirect('expenses')
+                    return redirect('/')
                 messages.error(
                     request, 'Account is not active,please check your email')
-                return render(request, 'authentication/login.html')
+                return render(request, 'login.html')
             messages.error(
                 request, 'Invalid credentials,try again')
             return render(request, 'login.html')
